@@ -28,7 +28,7 @@ export const Button = styled('button', {
   },
 
   '&:focus': {
-    boxShandow: '0 0 0 2px $colors$gray100'  
+    boxShandow: '0 0 0 2px $colors$gray100',
   },
 
   variants: {
