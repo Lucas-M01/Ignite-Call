@@ -10,8 +10,8 @@ export const ToastViewport = styled(Toast.Viewport, {
   display: 'flex',
   flexDirection: 'column',
   padding: 25,
-  gap: 10,
-  width: 390,
+  gap: '$1',
+  width: '$88',
   maxWidth: '100vw',
   margin: 0,
   listStyle: 'none',
@@ -35,15 +35,13 @@ const swipeOut = keyframes({
 })
 
 export const ToastRoot = styled(Toast.Root, {
-  backgroundColor: 'white',
-  borderRadius: 6,
+  backgroundColor: '$gray800',
+  borderRadius: '$sm',
+  border: '1px solid $gray600',
   boxShadow:
     'hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px',
-  padding: 15,
-  display: 'grid',
-  gridTemplateAreas: '"title action" "description action"',
-  gridTemplateColumns: 'auto max-content',
-  columnGap: 15,
+  padding: '$3 $5',
+
   alignItems: 'center',
 
   '&[data-state="open"]': {
@@ -65,68 +63,31 @@ export const ToastRoot = styled(Toast.Root, {
 })
 
 export const ToastTitle = styled(Toast.Title, {
-  gridArea: 'title',
   marginBottom: 5,
-  fontWeight: 500,
-  color: '$gray800',
-  fontSize: 15,
+  fontWeight: '$bold',
+  color: '$white',
+  fontSize: '$lg',
+  fontFamily: '$default',
 })
 
 export const ToastDescription = styled(Toast.Description, {
-  gridArea: 'description',
   margin: 0,
-  color: '$gray600',
-  fontSize: 13,
-  lineHeight: 1.3,
+  color: '$gray200',
+  fontSize: '$sm',
 })
 
-export const ToastAction = styled(Toast.Action, {
-  gridArea: 'action',
-})
-
-export const Button = styled('button', {
-  all: 'unset',
-  display: 'inline-flex',
+export const ToastHeader = styled('div', {
+  display: 'flex',
+  justifyContent: 'space-between',
   alignItems: 'center',
-  justifyContent: 'center',
-  borderRadius: 4,
-  fontWeight: 500,
+})
 
-  variants: {
-    size: {
-      small: {
-        fontSize: 12,
-        padding: '0 10px',
-        lineHeight: '25px',
-        height: 25,
-      },
-      large: {
-        fontSize: 15,
-        padding: '0 15px',
-        lineHeight: '35px',
-        height: 35,
-      },
-    },
-    variant: {
-      violet: {
-        backgroundColor: 'white',
-        color: '$ignite300',
-        boxShadow: `0 2px 10px $ignite300`,
-        '&:hover': { backgroundColor: '$black' },
-        '&:focus': { boxShadow: `0 0 0 2px $black` },
-      },
-      green: {
-        backgroundColor: '$ignite700',
-        color: '$ignite500',
-        boxShadow: `inset 0 0 0 1px $ignite600`,
-        '&:hover': { boxShadow: `inset 0 0 0 1px $ignite700` },
-        '&:focus': { boxShadow: `0 0 0 2px $ignite700` },
-      },
-    },
-  },
+export const ToastClose = styled(Toast.Close, {
+  background: 'transparent',
+  border: 0,
 
-  defaultVariants: {
-    size: 'large',
-    variant: 'violet',
+  svg: {
+    color: '$gray200',
+    cursor: 'pointer',
   },
 })

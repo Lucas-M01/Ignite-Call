@@ -1,9 +1,11 @@
-import { ComponentProps, useEffect, useRef, useState } from 'react'
+import { X } from 'phosphor-react'
+import { ComponentProps, useState } from 'react'
 import { Button } from '../Button'
 import {
-  ToastAction,
+  ToastClose,
   ToastContainer,
   ToastDescription,
+  ToastHeader,
   ToastRoot,
   ToastTitle,
   ToastViewport,
@@ -13,22 +15,20 @@ export interface ToastProps extends ComponentProps<typeof ToastContainer> {}
 
 export function Toast() {
   const [open, setOpen] = useState(false)
-  const eventDateRef = useRef(new Date())
-  const timerRef = useRef(0)
-
-  useEffect(() => {
-    return () => clearTimeout(timerRef.current)
-  }, [])
 
   return (
     <ToastContainer>
-      <Button>Add to calendar</Button>
+      <Button onClick={() => setOpen(true)}>Add to calendar</Button>
       <ToastRoot open={open} onOpenChange={setOpen}>
-        <ToastTitle>Scheduled: Catch up</ToastTitle>
+        <ToastHeader>
+          <ToastTitle>Agendamento realizado</ToastTitle>
+          <ToastClose>
+            <X weight="bold" size={20} />
+          </ToastClose>
+        </ToastHeader>
         <ToastDescription asChild>
-          <time dateTime={eventDateRef.current.toISOString()}></time>
+          <time dateTime={'dssds'}>ddd</time>
         </ToastDescription>
-        <ToastAction asChild altText="Goto schedule to undo"></ToastAction>
       </ToastRoot>
       <ToastViewport />
     </ToastContainer>
