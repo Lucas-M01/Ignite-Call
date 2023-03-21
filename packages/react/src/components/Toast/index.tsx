@@ -36,3 +36,5 @@ export function Toast({ date }: ToastProps) {
     </ToastContainer>
   )
 }
+
+Toast.displayName = 'Toast'
