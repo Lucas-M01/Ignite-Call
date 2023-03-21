@@ -11,9 +11,11 @@ import {
   ToastViewport,
 } from './styles'
 
-export interface ToastProps extends ComponentProps<typeof ToastContainer> {}
+export interface ToastProps extends ComponentProps<typeof ToastContainer> {
+  date: string
+}
 
-export function Toast() {
+export function Toast({ date }: ToastProps) {
   const [open, setOpen] = useState(false)
 
   return (
@@ -27,7 +29,7 @@ export function Toast() {
           </ToastClose>
         </ToastHeader>
         <ToastDescription asChild>
-          <time dateTime={'dssds'}>ddd</time>
+          <time dateTime={date}>{date}</time>
         </ToastDescription>
       </ToastRoot>
       <ToastViewport />

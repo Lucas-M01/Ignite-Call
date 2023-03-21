@@ -7,5 +7,5 @@
   "access": "publish",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": ["@ignite-ui/docs"]
+  "ignore": ["@lucasmont-ignite-ui/docs"]
 }

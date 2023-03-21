@@ -1,5 +1,5 @@
 {
-  "name": "@ignite-ui/docs",
+  "name": "@lucasmont-ignite-ui/docs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -16,10 +16,10 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.21.0",
-    "@ignite-ui/eslint-config": "*",
-    "@ignite-ui/react": "*",
-    "@ignite-ui/tokens": "*",
-    "@ignite-ui/ts-config": "*",
+    "@lucasmont-ignite-ui/eslint-config": "*",
+    "@lucasmont-ignite-ui/react": "*",
+    "@lucasmont-ignite-ui/tokens": "*",
+    "@lucasmont-ignite-ui/ts-config": "*",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-essentials": "^6.5.16",
     "@storybook/addon-interactions": "^6.5.16",
