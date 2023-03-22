@@ -1,0 +1,2 @@
+import{A as t}from"./index-ab9ed92e.js";import"./index-cada4186.js";import"./iframe-7216bb97.js";import"./index-25c46727.js";const c={title:"Data display/Avatar",component:t,args:{src:"https://github.com/Lucas-M01.png",alt:"Lucas Montenegro"},argTypes:{src:{control:{type:"text"}}}},i={},e={args:{src:void 0}},p=["Primary","WithFallback"];export{i as Primary,e as WithFallback,p as __namedExportsOrder,c as default};
+//# sourceMappingURL=Avatar.stories-f56cbdeb.js.map
