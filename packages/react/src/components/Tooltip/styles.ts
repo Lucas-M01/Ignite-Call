@@ -37,6 +37,7 @@ export const TooltipTrigger = styled(Tooltip.Trigger, {
   borderRadius: '$sm',
   background: '$gray600',
   color: '$white',
+  cursor: 'pointer',
 })
 
 export const TooltipPortal = styled(Tooltip.Portal, {})
